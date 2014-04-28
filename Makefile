@@ -14,7 +14,7 @@
 
 # territories without counties:
 # as fm gu mh mp pw um
-
+	
 all:
 
 .SECONDARY:
@@ -30,6 +30,11 @@ gz/tl_2012_us_zcta510.zip:
 	mkdir -p $(dir $@)
 	curl 'http://www2.census.gov/geo/tiger/TIGER2012/ZCTA5/$(notdir $@)' -o $@.download
 	mv $@.download $@
+
+gz/tl_2010_%_zcta510.zip:
+		mkdir -p $(dir $@)
+		curl 'http://www2.census.gov/geo/tiger/TIGER2010/ZCTA5/2010/$(notdir $@)' -o $@.download
+		mv $@.download $@
 
 # Census Tracts
 gz/tl_2012_%_tract.zip:
@@ -77,6 +82,67 @@ shp/us/waterbodies.shp: gz/wtrbdyp010_nt00803.tar.gz
 shp/us/congress-unfiltered.shp: gz/tl_2013_us_cd113.zip
 shp/us/zipcodes-unmerged.shp: gz/tl_2012_us_zcta510.zip
 shp/us/cbsa.shp: gz/tl_2012_us_cbsa.zip
+
+shp/al/zipcodes.shp: gz/tl_2010_01_zcta510.zip
+shp/ak/zipcodes.shp: gz/tl_2010_02_zcta510.zip
+shp/az/zipcodes.shp: gz/tl_2010_04_zcta510.zip
+shp/ar/zipcodes.shp: gz/tl_2010_05_zcta510.zip
+shp/ca/zipcodes.shp: gz/tl_2010_06_zcta510.zip
+shp/co/zipcodes.shp: gz/tl_2010_08_zcta510.zip
+shp/ct/zipcodes.shp: gz/tl_2010_09_zcta510.zip
+shp/de/zipcodes.shp: gz/tl_2010_10_zcta510.zip
+shp/dc/zipcodes.shp: gz/tl_2010_11_zcta510.zip
+shp/fl/zipcodes.shp: gz/tl_2010_12_zcta510.zip
+shp/ga/zipcodes.shp: gz/tl_2010_13_zcta510.zip
+shp/hi/zipcodes.shp: gz/tl_2010_15_zcta510.zip
+shp/id/zipcodes.shp: gz/tl_2010_16_zcta510.zip
+shp/il/zipcodes.shp: gz/tl_2010_17_zcta510.zip
+shp/in/zipcodes.shp: gz/tl_2010_18_zcta510.zip
+shp/ia/zipcodes.shp: gz/tl_2010_19_zcta510.zip
+shp/ks/zipcodes.shp: gz/tl_2010_20_zcta510.zip
+shp/ky/zipcodes.shp: gz/tl_2010_21_zcta510.zip
+shp/la/zipcodes.shp: gz/tl_2010_22_zcta510.zip
+shp/me/zipcodes.shp: gz/tl_2010_23_zcta510.zip
+shp/md/zipcodes.shp: gz/tl_2010_24_zcta510.zip
+shp/ma/zipcodes.shp: gz/tl_2010_25_zcta510.zip
+shp/mi/zipcodes.shp: gz/tl_2010_26_zcta510.zip
+shp/mn/zipcodes.shp: gz/tl_2010_27_zcta510.zip
+shp/ms/zipcodes.shp: gz/tl_2010_28_zcta510.zip
+shp/mo/zipcodes.shp: gz/tl_2010_29_zcta510.zip
+shp/mt/zipcodes.shp: gz/tl_2010_30_zcta510.zip
+shp/ne/zipcodes.shp: gz/tl_2010_31_zcta510.zip
+shp/nv/zipcodes.shp: gz/tl_2010_32_zcta510.zip
+shp/nh/zipcodes.shp: gz/tl_2010_33_zcta510.zip
+shp/nj/zipcodes.shp: gz/tl_2010_34_zcta510.zip
+shp/nm/zipcodes.shp: gz/tl_2010_35_zcta510.zip
+shp/ny/zipcodes.shp: gz/tl_2010_36_zcta510.zip
+shp/nc/zipcodes.shp: gz/tl_2010_37_zcta510.zip
+shp/nd/zipcodes.shp: gz/tl_2010_38_zcta510.zip
+shp/oh/zipcodes.shp: gz/tl_2010_39_zcta510.zip
+shp/ok/zipcodes.shp: gz/tl_2010_40_zcta510.zip
+shp/or/zipcodes.shp: gz/tl_2010_41_zcta510.zip
+shp/pa/zipcodes.shp: gz/tl_2010_42_zcta510.zip
+shp/ri/zipcodes.shp: gz/tl_2010_44_zcta510.zip
+shp/sc/zipcodes.shp: gz/tl_2010_45_zcta510.zip
+shp/sd/zipcodes.shp: gz/tl_2010_46_zcta510.zip
+shp/tn/zipcodes.shp: gz/tl_2010_47_zcta510.zip
+shp/tx/zipcodes.shp: gz/tl_2010_48_zcta510.zip
+shp/ut/zipcodes.shp: gz/tl_2010_49_zcta510.zip
+shp/vt/zipcodes.shp: gz/tl_2010_50_zcta510.zip
+shp/va/zipcodes.shp: gz/tl_2010_51_zcta510.zip
+shp/wa/zipcodes.shp: gz/tl_2010_53_zcta510.zip
+shp/wv/zipcodes.shp: gz/tl_2010_54_zcta510.zip
+shp/wi/zipcodes.shp: gz/tl_2010_55_zcta510.zip
+shp/wy/zipcodes.shp: gz/tl_2010_56_zcta510.zip
+shp/as/zipcodes.shp: gz/tl_2010_60_zcta510.zip
+shp/fm/zipcodes.shp: gz/tl_2010_64_zcta510.zip
+shp/gu/zipcodes.shp: gz/tl_2010_66_zcta510.zip
+shp/mh/zipcodes.shp: gz/tl_2010_68_zcta510.zip
+shp/mp/zipcodes.shp: gz/tl_2010_69_zcta510.zip
+shp/pw/zipcodes.shp: gz/tl_2010_70_zcta510.zip
+shp/pr/zipcodes.shp: gz/tl_2010_72_zcta510.zip
+shp/um/zipcodes.shp: gz/tl_2010_74_zcta510.zip
+shp/vi/zipcodes.shp: gz/tl_2010_78_zcta510.zip
 
 shp/al/tracts.shp: gz/tl_2012_01_tract.zip
 shp/ak/tracts.shp: gz/tl_2012_02_tract.zip
@@ -298,7 +364,20 @@ shp/us/%.json: shp/us/%-unmerged.shp bin/geomerge
 	ogr2ogr -f 'GeoJSON' $(basename $@)-unmerged.json $<
 	bin/geomerge < $(basename $@)-unmerged.json > $@
 
-shp/us/zipcodes.shp shp/us/cbsa.shp shp/%/tracts.shp shp/%/blockgroups.shp shp/%/blocks.shp:
+shp/%/zipcodes.json: shp/%/zipcodes.shp bin/geomerge
+	@rm -f -- $@ $(basename $@)-unmerged.json
+	ogr2ogr -f 'GeoJSON' $(basename $@)-unmerged.json $<
+	bin/geomerge < $(basename $@)-unmerged.json > $@
+
+shp/us/cbsa.shp:
+	rm -rf $(basename $@)
+	mkdir -p $(basename $@)
+	unzip -d $(basename $@) $<
+	for file in $(basename $@)/*; do chmod 644 $$file; mv $$file $(basename $@).$${file##*.}; done
+	rmdir $(basename $@)
+	touch $@
+
+shp/%/zipcodes.shp shp/%/tracts.shp shp/%/blockgroups.shp shp/%/blocks.shp:
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
 	unzip -d $(basename $@) $<
@@ -615,6 +694,83 @@ png/%.png: shp/%.shp bin/rasterize
 	mkdir -p $(dir $@)
 	node --max_old_space_size=8192 bin/rasterize $< $@
 	optipng $@
+
+topo/zipcodes/%-zipcodes-ungrouped.json: shp/%/zipcodes.shp shp/%/zipcodes.json
+	mkdir -p $(dir $@)
+	node_modules/.bin/topojson \
+		-o $@ \
+		--no-pre-quantization \
+		--post-quantization=1e6 \
+		--simplify=7e-7 \
+		--id-property=+ZCTA5CE10 \
+		-- zipcodes=$<
+
+topo/zipcodes/%-zipcodes.json: topo/zipcodes/%-zipcodes-ungrouped.json shp/%/zipcodes.json
+	node_modules/.bin/topojson-group \
+		-o $@ \
+		-- topo/zipcodes/$*-zipcodes-ungrouped.json
+
+topo-zipcodes: 		topo/zipcodes/al-zipcodes.json \
+		topo/zipcodes/ak-zipcodes.json \
+		topo/zipcodes/az-zipcodes.json \
+		topo/zipcodes/ar-zipcodes.json \
+		topo/zipcodes/ca-zipcodes.json \
+		topo/zipcodes/co-zipcodes.json \
+		topo/zipcodes/ct-zipcodes.json \
+		topo/zipcodes/de-zipcodes.json \
+		topo/zipcodes/dc-zipcodes.json \
+		topo/zipcodes/fl-zipcodes.json \
+		topo/zipcodes/ga-zipcodes.json \
+		topo/zipcodes/hi-zipcodes.json \
+		topo/zipcodes/id-zipcodes.json \
+		topo/zipcodes/il-zipcodes.json \
+		topo/zipcodes/in-zipcodes.json \
+		topo/zipcodes/ia-zipcodes.json \
+		topo/zipcodes/ks-zipcodes.json \
+		topo/zipcodes/ky-zipcodes.json \
+		topo/zipcodes/la-zipcodes.json \
+		topo/zipcodes/me-zipcodes.json \
+		topo/zipcodes/md-zipcodes.json \
+		topo/zipcodes/ma-zipcodes.json \
+		topo/zipcodes/mi-zipcodes.json \
+		topo/zipcodes/mn-zipcodes.json \
+		topo/zipcodes/ms-zipcodes.json \
+		topo/zipcodes/mo-zipcodes.json \
+		topo/zipcodes/mt-zipcodes.json \
+		topo/zipcodes/ne-zipcodes.json \
+		topo/zipcodes/nv-zipcodes.json \
+		topo/zipcodes/nh-zipcodes.json \
+		topo/zipcodes/nj-zipcodes.json \
+		topo/zipcodes/nm-zipcodes.json \
+		topo/zipcodes/ny-zipcodes.json \
+		topo/zipcodes/nc-zipcodes.json \
+		topo/zipcodes/nd-zipcodes.json \
+		topo/zipcodes/oh-zipcodes.json \
+		topo/zipcodes/ok-zipcodes.json \
+		topo/zipcodes/or-zipcodes.json \
+		topo/zipcodes/pa-zipcodes.json \
+		topo/zipcodes/ri-zipcodes.json \
+		topo/zipcodes/sc-zipcodes.json \
+		topo/zipcodes/sd-zipcodes.json \
+		topo/zipcodes/tn-zipcodes.json \
+		topo/zipcodes/tx-zipcodes.json \
+		topo/zipcodes/ut-zipcodes.json \
+		topo/zipcodes/vt-zipcodes.json \
+		topo/zipcodes/va-zipcodes.json \
+		topo/zipcodes/wa-zipcodes.json \
+		topo/zipcodes/wv-zipcodes.json \
+		topo/zipcodes/wi-zipcodes.json \
+		topo/zipcodes/wy-zipcodes.json \
+		topo/zipcodes/as-zipcodes.json \
+		topo/zipcodes/fm-zipcodes.json \
+		topo/zipcodes/gu-zipcodes.json \
+		topo/zipcodes/mh-zipcodes.json \
+		topo/zipcodes/mp-zipcodes.json \
+		topo/zipcodes/pw-zipcodes.json \
+		topo/zipcodes/pr-zipcodes.json \
+		topo/zipcodes/um-zipcodes.json \
+		topo/zipcodes/vi-zipcodes.json
+
 
 topo/us-congress-10m-ungrouped.json: shp/us/congress-ungrouped.shp
 	mkdir -p $(dir $@)
