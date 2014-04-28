@@ -761,14 +761,9 @@ topo-zipcodes: 		topo/zipcodes/al-zipcodes.json \
 		topo/zipcodes/wv-zipcodes.json \
 		topo/zipcodes/wi-zipcodes.json \
 		topo/zipcodes/wy-zipcodes.json \
-		topo/zipcodes/as-zipcodes.json \
-		topo/zipcodes/fm-zipcodes.json \
 		topo/zipcodes/gu-zipcodes.json \
-		topo/zipcodes/mh-zipcodes.json \
 		topo/zipcodes/mp-zipcodes.json \
-		topo/zipcodes/pw-zipcodes.json \
 		topo/zipcodes/pr-zipcodes.json \
-		topo/zipcodes/um-zipcodes.json \
 		topo/zipcodes/vi-zipcodes.json
 
 
